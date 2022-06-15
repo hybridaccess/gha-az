@@ -14,7 +14,7 @@ function parse_input() {
 check_deps
 parse_input
 
-az login --service-principal --username $azuread_application_id --password $azuread_client_secret --tenant $AZ_TENANT
+# az login --service-principal --username $azuread_application_id --password $azuread_client_secret --tenant $AZ_TENANT
 
 eval "$(jq -r '@sh "RESOURCE_GROUP=\(.resource_group) SUBSCRIPTION_NAME=\(.subscription)"')"
 
