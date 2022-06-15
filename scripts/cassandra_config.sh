@@ -21,6 +21,6 @@ ls -al /usr/bin/
 
 eval "$(jq -r '@sh "RESOURCE_GROUP=\(.resource_group) SUBSCRIPTION_NAME=\(.subscription)"')"
 
-PROPERTIES=$(./usr/bin/az group show --resource-group "$RESOURCE_GROUP" --subscription "$SUBSCRIPTION_NAME" --query "properties" -o json)
+PROPERTIES=$(/usr/bin/az group show --resource-group "$RESOURCE_GROUP" --subscription "$SUBSCRIPTION_NAME" --query "properties" -o json)
 
 jq -n --arg properties "$PROPERTIES" '{"properties":$properties}'
