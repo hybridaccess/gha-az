@@ -14,7 +14,7 @@ function parse_input() {
 check_deps
 parse_input
 
-locate az
+pwd
 ls -al /usr/bin/
 
 # az login --service-principal --username $azuread_application_id --password $azuread_client_secret --tenant $AZ_TENANT
