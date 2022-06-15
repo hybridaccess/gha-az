@@ -19,5 +19,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install latest Azure CLI
+        run: curl -skL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
       - name: terraform plan
         uses: dflook/terraform-plan@v1
