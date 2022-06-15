@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Azure CLI script
-        run: az
+        run: which az
 
       - name: terraform plan
         uses: dflook/terraform-plan@v1
