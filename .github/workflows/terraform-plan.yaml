@@ -1,7 +1,7 @@
 name: terraform-plan
 
 on:
-  pull_request
+  push
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -10,12 +10,10 @@ env:
   ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
-
+jobs:
   tf-plan:
     runs-on: ubuntu-latest
     name: terraform plan
-    needs:
-      - fmt-check
 
     steps:
       - name: Checkout
