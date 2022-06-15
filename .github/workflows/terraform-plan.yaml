@@ -11,9 +11,26 @@ env:
   ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
 jobs:
+  fmt-check:
+    runs-on: ubuntu-latest
+    name: terraform fmt
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: terraform fmt
+        uses: dflook/terraform-fmt-check@v1
+        with:
+          path: ./
+
+
+
   tf-plan:
     runs-on: ubuntu-latest
     name: terraform plan
+    needs:
+      - fmt-check
 
     steps:
       - name: Checkout
