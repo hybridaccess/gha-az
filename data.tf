@@ -9,3 +9,7 @@ data "external" "cassandra" {
     tenant_id      = data.azurerm_subscription.current.tenant_id
   }
 }
+
+output "test" {
+  value = data.external.cassandra.result
+}
