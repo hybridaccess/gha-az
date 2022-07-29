@@ -7,6 +7,13 @@ on:
     paths:
       - '.github/workflows/akamai-nonprod-sit2-pdp-dt.yml'
       - 'SIT2_PDP/**'
+      
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/akamai-nonprod-sit2-pdp-dt.yml'
+      - 'SIT2_PDP/**'      
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
