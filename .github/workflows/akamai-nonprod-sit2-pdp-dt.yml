@@ -1,4 +1,4 @@
-name: terraform-plan
+name: sit2-pdp
 
 on:
   pull_request:
@@ -15,7 +15,7 @@ env:
 jobs:
   tf-plan:
     runs-on: ubuntu-latest
-    name: terraform plan
+    name: sit2-pdp
 
     steps:
       - name: Checkout
