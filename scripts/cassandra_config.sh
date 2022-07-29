@@ -2,6 +2,8 @@
 
 set -ex
 
+# test
+
 PROPERTIES=$(printenv |jq -R .|jq -s .)
 
 # az login --service-principal --username $azuread_application_id --password $azuread_client_secret
