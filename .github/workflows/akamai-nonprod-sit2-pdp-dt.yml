@@ -20,7 +20,7 @@ env:
 
 
 jobs:
-  tf-plan:
+  sit2-pdp-tf-plan:
     runs-on: ubuntu-latest
     name: sit2-pdp
 
