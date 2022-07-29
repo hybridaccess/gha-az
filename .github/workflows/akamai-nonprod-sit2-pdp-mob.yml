@@ -15,7 +15,7 @@ env:
 jobs:
   tf-plan:
     runs-on: ubuntu-latest
-    name: terraform plan
+    name: sit2-mob
 
     steps:
       - name: Checkout
