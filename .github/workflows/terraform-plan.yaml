@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.github/worflows/akamai-*.yml'
+      - 'SIT2_PDP/**'
+      - 'SIT2_PDP_MOBILE/**'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
