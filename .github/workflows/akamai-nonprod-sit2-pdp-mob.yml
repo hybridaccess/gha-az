@@ -1,1 +1,22 @@
-name: 'Test'
+name: terraform-plan
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/akamai-nonprod-sit2-pdp-dt.yml'
+      - 'SIT2_PDP/*'
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+jobs:
+  tf-plan:
+    runs-on: ubuntu-latest
+    name: terraform plan
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2name: 'Test'
